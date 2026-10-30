@@ -45,7 +45,7 @@ if st.button("Generate Roadmap", type="primary"):
             try:
                 client = Groq(api_key=api_key)
                 resp = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+model="openai/gpt-oss-120b",
                     messages=[
                         {"role": "system", "content": "You create realistic, well-paced learning roadmaps."},
                         {"role": "user", "content": build_prompt(field, level, duration)},
